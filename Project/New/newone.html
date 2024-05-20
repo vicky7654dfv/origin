@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex box</title>
+
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+
+            text-align: center;
+            text-transform: capitalize;
+            background-color: palegreen;
+        }
+
+        section {
+            width: 100%;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        div.card {
+            width: 40rem;
+            border: 1px solid hsl(250, 63%, 55%);
+            margin: 2rem 0;
+
+            border-radius: 2rem;
+
+            box-shadow: 1px 1px 2px hsl(27, 63%, 55%);
+        }
+
+        div.image-card {
+            width: 20rem;
+            height: auto;
+        }
+  
+        div.image-card  img {
+            width: inherit;
+            height: inherit;
+            border-radius: 2rem 0 0 2rem;
+        }
+
+        div.image-card.left img {
+            border-radius: 0 2rem 2rem 0;
+        }
+        
+        .grid {
+            display: grid;
+            place-content: center;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <section>
+        <div class="container grid">
+            <h1>Flex box</h1>
+            <div class="flex card">
+                <div class="image-card">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg/800px-Cristiano_Ronaldo_playing_for_Al_Nassr_FC_against_Persepolis%2C_September_2023_%28cropped%29.jpg" alt="some random image">
+                </div>
+                <div class="text-card">
+                    <p>He is one of the few players to have made over 1,200 professional career appearances, the most by an outfield player, and has scored over 890 official senior career goals for club and country, making him the top goalscorer of all time.</p>
+                </div>
+            </div>
+            <div class="flex card">
+                <div class="text-card">
+                    <p>Messi won FIFA's World Player Trophy five times, including four consecutive wins between 2009 and 2012, and has collected its contemporary the Best FIFA Men's Player three times, in 2019, 2022, and 2023. The soccer legend has won Europe's Ballon d'Or a record eight times.</p>
+                </div>
+                <div class="image-card left">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Lionel-Messi-Argentina-2022-FIFA-World-Cup_%28cropped%29.jpg" alt="some random image">
+                </div>
+            </div>
+            <div class="flex card">
+                <div class="image-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmB6LB4jlOkRvdXd6HOQM7oAxWtuSGG4DemA&s" alt="some random image">
+                </div>
+                <div class="text-card">
+                    <p>John Cena (born April 23, 1977, West Newbury, Massachusetts, U.S.) American professional wrestler, actor, and author who first gained fame with the World Wrestling Entertainment (WWE) organization and later had success in movies and books.</p>
+                </div>
+            </div>
+            <div class="flex card">
+                <div class="text-card">
+                    <p>He was born in Delhi, India on November 5, 1988. Virat is the first player in ICC cricket history to win all 3 ICC awards in a single year- ICC , ODI player of the year, ICC Test player of the year and ICC Player of the year award in 2018. He is rated as one of the best batsmen in the world.
+                    </p>
+                </div>
+                <div class="image-card left">
+                    <img src="https://res.9appsinstall.com/group5/M01/68/C0/IqEHAF3FGTaAVL4DAAFxYLhGQWM922.jpg?x-oss-process=style/hq">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        *{
+            box-sizing: border-box;
+        }
+
+        .open-button{
+            background-color: #555;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            opacity: 0.8;
+            position: fixed;
+            bottom: 23px;
+            right: 28px;
+            width: 280px;
+        }
+
+        .form-popup{
+            display: none;
+            position: fixed;
+            bottom: 0;
+            right: 15px;
+            border: 3px solid #f1f1f1;
+            z-index: 0;
+        }
+
+        .form-container{
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .form-container input[type=text], .form-container input[type=password]{
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background-color: #f1f1f1;
+        }
+
+        .form-container input[type=text]:focus, .form-container input[type=password]:focus{
+            background-color: #ddd;
+            outline: none;
+        }
+
+        .form-container .btn{
+            background-color: #04aa6d;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+        }
+
+        .form-container .cancel{
+            background-color: red;
+        }
+
+        .form-container .btn:hover, .open-button:hover{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h2>Popup form</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias illum soluta ea, eos eligendi nesciunt sapiente at, et aliquid, recusandae voluptatibus fugiat. Obcaecati iusto ducimus suscipit quae, alias assumenda perferendis.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo,amet omnis atque velit, illo dolores dolorem, deleniti in tempore quos incidunt ratione hic reprehenderit.</p>
+
+    <button class="open-button" onclick="openForm()">Open Form</button>
+
+    <div class="form-popup" id="myForm">
+        <form action="Success.html" class="form-container">
+            <h1>Login</h1>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" name="Enter Email" id="email" placeholder="Enter email" required>
+
+            <label for="pwd"><b>Password</b></label>
+            <input type="password" name="pwd" placeholder="Enter Password" required>
+
+            <button type="submit" class="btn">Login</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <script>
+        function openForm(){
+            document.getElementById("myForm").style.display="block";
+        }
+
+        function closeForm(){
+            document.getElementById("myForm").style.display="none";
+        }
+    </script>
+</body>
+</html>
